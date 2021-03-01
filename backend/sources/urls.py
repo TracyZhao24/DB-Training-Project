@@ -1,12 +1,13 @@
-from . import views     # what does this even do
+from . import views     
 from django.urls import path, include
 # localhost:5000/test
 
 # maps urls to views
 
-# TODO: change all these to sources
 urlpatterns = [
-    #path('notes/create', views.create_note_drf),       # create new sources
-    #path('drf/note/<int:id>', views.get_note_drf),     # list all sources
-    #path('notes/update/<int:id>', views.update_note)   # ie sources/10, modify existing sources
+    path('create', views.create),           # create new sources
+    path('read/<int:id>', views.read),      # read a sources, TODO: do i need this?
+    path('list', views.list),               # list all sources
+    path('update/<int:id>', views.update),  # modify an existing source, ie sources/10
+    path('delete/<int:id>', views.delete)   # delete an existing source, ie sources/10
 ]
