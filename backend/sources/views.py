@@ -51,7 +51,7 @@ def read(request, id):
 	return JsonResponse(serializer.data)
 
 
-# GET, POST, PUT (updates)
+# updates (GET, POST, PUT)
 @api_view(['PUT'])
 def update(request, id):
 	source = get_object_or_404(
