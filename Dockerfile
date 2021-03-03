@@ -44,9 +44,9 @@ RUN pip install -U -r requirements.txt
 
 # Copy your application code to the container (make sure you create a .dockerignore file if any large files or directories should be excluded)
 
-COPY /backend /backend
+# COPY /backend /backend
 
-ADD . /backend/
+# ADD . /backend/
 
 EXPOSE 3000
 
