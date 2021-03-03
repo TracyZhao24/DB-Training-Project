@@ -1,4 +1,5 @@
 from django.http import HttpResponse, JsonResponse
+from django.shortcuts import get_object_or_404
 from .models import Source
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -21,7 +22,7 @@ from rest_framework.decorators import api_view
 
 # create a new source
 # what are the triple quotes for??? (the request.GETs)
-@api_view(["POST"])
+@api_view(['POST'])
 def create(request):
 	"""	
 	request.GET["name"]  => name of new source
@@ -43,13 +44,12 @@ def create(request):
 # access and read a source
 @api_view(['GET'])
 def read(request, id):
-	souorce = get_object_or_404(
+	source = get_object_or_404(
 		Source,
 		id=id
 	)
 	serializer = SourceSerializer(source)
 	return JsonResponse(serializer.data)
-
 
 # updates (GET, POST, PUT)
 @api_view(['PUT'])
@@ -58,7 +58,7 @@ def update(request, id):
 		Source,
 		id=id
 	)
-	serializer = SourceSerializer(note, data=request.data)
+	serializer = SourceSerializer(source, data=request.data)
 	if serializer.is_valid():
 		serializer.save()
 		return JsonResponse({
@@ -81,7 +81,7 @@ def delete(request, id):
 		'id': id
 	})
 
-
+# what is this for????? there's another GET function up above...
 @api_view(['GET'])
 def list(request):
 	source = Source.objects.all()
