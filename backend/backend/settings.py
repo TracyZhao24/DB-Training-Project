@@ -25,7 +25,7 @@ SECRET_KEY = 't2@3kr4ss70@-qdn&^8_oxk4yfscp2kc2&meje60e#433+y!%z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0']
+ALLOWED_HOSTS = ['localhost', '0.0.0.0']
 
 
 # Application definition
@@ -38,11 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'corsheaders',      # to solve the CORS error
     'rest_framework',
     'sources'
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',        # to solve the CORS error
+    'django.middleware.common.CommonMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

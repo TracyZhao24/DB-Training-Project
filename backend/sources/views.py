@@ -35,7 +35,7 @@ def create(request):
 	if serializer.is_valid():
 		source = serializer.save()
 		return JsonResponse({
-			'id': source.id
+			'id': source.id		# return id of the object that was created
 		})
 	else:
 		return JsonResponse(serializer.errors, status=400)

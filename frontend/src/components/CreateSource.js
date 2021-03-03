@@ -1,7 +1,8 @@
 import axios from 'axios';
-import React, {useState, useEffect} from 'react'    // do I need useEffect?
+import React, {useState} from 'react'    
 
 // TODO: fix the styling on this, ask Neil where styling belongs
+// TODO: add styling? padding and margins are needed
 
 // class Source(models.Model):       
 //     name = models.TextField()
@@ -17,7 +18,7 @@ function CreateSource(props) {
     const [emails, setEmails] = useState("")
     const [notes, setNotes] = useState("")
 
-    function submitForm () {
+    function submitForm() {
         axios.post('http://localhost:5000/sources/create', {
             name: name,
             organization: organization, 
@@ -27,8 +28,7 @@ function CreateSource(props) {
         }).then(
             (response) => {
                 console.log(response)
-            }
-        ).catch(
+        }).catch(
             err => {
             console.log(err);
             }

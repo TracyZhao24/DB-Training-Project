@@ -1,6 +1,6 @@
 from . import views     
 from django.urls import path, include
-# localhost:5000/test
+# localhost:5000/sources
 
 # maps urls to views
 
