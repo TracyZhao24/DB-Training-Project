@@ -6,8 +6,8 @@ from django.urls import path, include
 
 urlpatterns = [
     path('create', views.create),           # create new sources
-    path('read/<int:id>', views.read),      # read a sources, TODO: do i need this?
-    path('list', views.list),               # list all sources
-    path('update/<int:id>', views.update),  # modify an existing source, ie sources/10
-    path('delete/<int:id>', views.delete)   # delete an existing source, ie sources/10
+    path('read/<int:id>', views.read),      # read a source
+    path('read/all', views.readAll),        # list all sources #TODO: this isn't working
+    path('update/<int:id>', views.update),  # modify an existing source, ie sources/5
+    path('delete/<int:id>', views.delete)   # delete an existing source, ie sources/5
 ]

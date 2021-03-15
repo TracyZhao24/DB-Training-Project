@@ -24,14 +24,6 @@ from rest_framework.decorators import api_view
 # what are the triple quotes for??? (the request.GETs)
 @api_view(['POST'])
 def create(request):
-	"""	
-	request.GET["name"]  => name of new source
-	request.GET["organization"]  
-	request.GET["phoneNumbers"]  
-	request.GET["emails"]  
-	request.GET["notes"]  
-	request.GET["id"]  
-	"""
 	serializer = SourceSerializer(data=request.data)
 	if serializer.is_valid():
 		source = serializer.save()
@@ -74,20 +66,16 @@ def delete(request, id):
 		Source,
 		id=id
 	)
-
 	source.delete()
-
 	return JsonResponse({
 		'id': id
 	})
 
-# what is this for????? there's another GET function up above...
+# to list all sources
 @api_view(['GET'])
-def list(request):
-	source = Source.objects.all()
-
+def readAll(request):
+	sources = Source.objects.all()
 	serializer = SourceSerializer(sources, many=True)
-
 	return JsonResponse(serializer.data, safe=False)
 
 
