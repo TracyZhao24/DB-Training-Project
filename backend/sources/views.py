@@ -21,7 +21,6 @@ from rest_framework.decorators import api_view
 #
 
 # create a new source
-# what are the triple quotes for??? (the request.GETs)
 @api_view(['POST'])
 def create(request):
 	serializer = SourceSerializer(data=request.data)

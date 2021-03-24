@@ -37,11 +37,11 @@ function CreateSource(props) {
 
     return(
     <div>
-        <label>Source Name: </label><input onChange={(e) => setName(e.target.value)}/>
-        <label>Source Organization: </label><input onChange={(e) => setOrganization(e.target.value)}/>
-        <label>Phone Number(s): </label><input onChange={(e) => setPhoneNums(e.target.value)}/>
-        <label>Email(s): </label><input onChange={(e) => setEmails(e.target.value)}/>
-        <label>Notes: </label><input onChange={(e) => setNotes(e.target.value)}/>
+        <label><strong>Name: </strong> </label><input onChange={(e) => setName(e.target.value)}/>
+        <label><strong>Organization: </strong> </label><input onChange={(e) => setOrganization(e.target.value)}/>
+        <label><strong>Phone Number(s): </strong></label><input onChange={(e) => setPhoneNums(e.target.value)}/>
+        <label><strong>Email(s): </strong> </label><input onChange={(e) => setEmails(e.target.value)}/>
+        <label><strong>Notes: </strong></label><input onChange={(e) => setNotes(e.target.value)}/>
         <button onClick={submitForm}>Create Source</button>
     </div>)
 }
