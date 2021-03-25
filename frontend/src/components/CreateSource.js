@@ -2,7 +2,7 @@ import axios from 'axios';
 import React, {useState} from 'react'    
 
 // TODO: fix the styling on this, ask Neil where styling belongs
-// TODO: add styling? padding and margins are needed
+// TODO: add styling? need padding and margins 
 
 // class Source(models.Model):       
 //     name = models.TextField()
