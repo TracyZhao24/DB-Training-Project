@@ -84,9 +84,3 @@ def readAll(request):
 # read()  => GET /1
 # destroy() => DELETE /1
 # update() => PUT /1
-
-
-# class NoteViewSet(viewsets.ModelViewSet):
-#     queryset = Note.objects.all()
-#     serializer_class = SourceSerializer
-

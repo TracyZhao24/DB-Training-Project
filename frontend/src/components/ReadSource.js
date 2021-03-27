@@ -3,13 +3,12 @@ import React, {useState} from 'react'
 import '../index.css'   
 
 function ReadSource(props) {
-    const [id, setID] = useState("")
-
     const [name, setName] = useState("")
     const [organization, setOrganization] = useState("")
     const [phoneNumbers, setPhoneNums] = useState("")
     const [emails, setEmails] = useState("")
     const [notes, setNotes] = useState("")
+    const [id, setID] = useState("")
 
     function retrieve() {
         axios.get(`http://localhost:5000/sources/read/${id}`)
