@@ -23,11 +23,13 @@ function App(props) {
       <h2>Update an Existing Source: </h2>
         <p><UpdateSource/></p>
       <hr/>
-      <h2>Find a Source (by ID): </h2>
-        <p><ReadSource/></p>
-      <hr/>
       <h2>Delete a Source (by ID): </h2>
         <p><DeleteSource/></p>
+    
+      {/* <h2>Find a Source (by ID): </h2>
+        <p><ReadSource/></p>
+      <hr/> */}
+      
     </div>
   )
 }
