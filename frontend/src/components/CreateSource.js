@@ -1,5 +1,6 @@
 import axios from 'axios';
-import React, {useState} from 'react'    
+import React, {useState} from 'react' 
+import '../index.css'   
 
 // TODO: fix the styling on this, ask Neil where styling belongs
 // TODO: add styling? need padding and margins 
@@ -42,7 +43,7 @@ function CreateSource(props) {
         <label><strong>Phone Number(s): </strong></label><input onChange={(e) => setPhoneNums(e.target.value)}/>
         <label><strong>Email(s): </strong> </label><input onChange={(e) => setEmails(e.target.value)}/>
         <label><strong>Notes: </strong></label><input onChange={(e) => setNotes(e.target.value)}/>
-        <button onClick={submitForm}>Create Source</button>
+        <p><button onClick={submitForm}>Create Source</button></p>
     </div>)
 }
 

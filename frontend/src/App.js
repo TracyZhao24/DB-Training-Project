@@ -2,6 +2,7 @@ import './App.css';
 import axios from 'axios';
 import React, {useState, useEffect} from 'react'    // do I need these?
 import CreateSource from "./components/CreateSource"
+import UpdateSource from "./components/UpdateSource"
 import ReadSource from "./components/ReadSource"
 import DeleteSource from "./components/DeleteSource"
 
@@ -11,11 +12,18 @@ import DeleteSource from "./components/DeleteSource"
 function App(props) {
   return(
     <div>
-      <p><CreateSource/></p>
-      <br/>
-      <p><ReadSource/></p>
-      <br/>
-      <p><DeleteSource/></p>
+      <h1>Daily Bruin Sources</h1>
+      <h2>Create a New Source: </h2>
+        <p><CreateSource/></p>
+      <hr/>
+      <h2>Update an Existing Source: </h2>
+        <p><UpdateSource/></p>
+      <hr/>
+      <h2>Find a Source (by ID): </h2>
+        <p><ReadSource/></p>
+      <hr/>
+      <h2>Delete a Source (by ID): </h2>
+        <p><DeleteSource/></p>
     </div>
   )
 }

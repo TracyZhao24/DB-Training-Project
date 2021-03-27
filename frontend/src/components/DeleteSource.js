@@ -1,5 +1,8 @@
 import axios from 'axios';
-import React, {useState} from 'react'    
+import React, {useState} from 'react'  
+import '../index.css' 
+
+// TODO: figure out how to create pop-up window and implement the "cancel" button
 
 // class Source(models.Model):       
 //     name = models.TextField()
@@ -55,7 +58,7 @@ function DeleteSource(props) {
         
         <p><strong>Are you sure?</strong></p>
         <button onClick={remove}>Delete</button>
-        {/* <button>Cancel</button> */}
+        {/* <button>Cancel</button> */} 
     </div>
     )
 }
