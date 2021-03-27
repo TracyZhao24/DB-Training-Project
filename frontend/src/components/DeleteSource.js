@@ -57,7 +57,7 @@ function DeleteSource(props) {
         <p><strong>Notes: </strong> {notes} </p>
         
         <p><strong>Are you sure?</strong></p>
-        <button onClick={remove}>Delete</button>
+        <button style = {{backgroundColor: "red", color: "white"}} onClick={remove}>Delete</button>
         {/* <button>Cancel</button> */} 
     </div>
     )

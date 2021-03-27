@@ -27,6 +27,8 @@ label {
 button {
   margin-left: 1em;
   border-radius: 8px;
+  height: 2em;
+  width: 8%;
 }
 
 ::placeholder {

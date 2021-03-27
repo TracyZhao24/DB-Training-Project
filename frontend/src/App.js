@@ -4,11 +4,10 @@ import React, {useState, useEffect} from 'react'    // do I need these?
 import ListAllSources from "./components/ListAllSources"
 import CreateSource from "./components/CreateSource"
 import UpdateSource from "./components/UpdateSource"
-import ReadSource from "./components/ReadSource"
 import DeleteSource from "./components/DeleteSource"
+import ReadSource from "./components/ReadSource"
 
-
-// TODO: make components for listing all sources, modifying existing sources, and deleting sources
+// make separate pages
 
 function App(props) {
   return(
@@ -29,7 +28,7 @@ function App(props) {
       {/* <h2>Find a Source (by ID): </h2>
         <p><ReadSource/></p>
       <hr/> */}
-      
+
     </div>
   )
 }
